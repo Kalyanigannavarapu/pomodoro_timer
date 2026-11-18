@@ -1,0 +1,265 @@
+{
+  "version": 1,
+  "author": "pomodoro-twin",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-arduino-nano",
+      "id": "nano",
+      "top": 0,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd",
+      "top": -160,
+      "left": -20,
+      "attrs": {
+        "pins": "i2c"
+      }
+    },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz",
+      "top": -150,
+      "left": 220,
+      "attrs": {
+        "volume": "0.1"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "b_h_up",
+      "top": 150,
+      "left": -20,
+      "attrs": {
+        "color": "green",
+        "label": "H+"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "b_h_dn",
+      "top": 150,
+      "left": 50,
+      "attrs": {
+        "color": "red",
+        "label": "H-"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "b_m_up",
+      "top": 150,
+      "left": 120,
+      "attrs": {
+        "color": "green",
+        "label": "M+"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "b_m_dn",
+      "top": 150,
+      "left": 190,
+      "attrs": {
+        "color": "red",
+        "label": "M-"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "b_s_up",
+      "top": 150,
+      "left": 260,
+      "attrs": {
+        "color": "green",
+        "label": "S+"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "b_s_dn",
+      "top": 150,
+      "left": 330,
+      "attrs": {
+        "color": "red",
+        "label": "S-"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "b_start",
+      "top": 150,
+      "left": 400,
+      "attrs": {
+        "color": "blue",
+        "label": "START"
+      }
+    }
+  ],
+  "connections": [
+    [
+      "nano:5V",
+      "lcd:VCC",
+      "red",
+      [
+        "v-20"
+      ]
+    ],
+    [
+      "nano:GND.2",
+      "lcd:GND",
+      "black",
+      [
+        "v-30"
+      ]
+    ],
+    [
+      "nano:A4",
+      "lcd:SDA",
+      "blue",
+      [
+        "v-40"
+      ]
+    ],
+    [
+      "nano:A5",
+      "lcd:SCL",
+      "yellow",
+      [
+        "v-50"
+      ]
+    ],
+    [
+      "nano:3",
+      "bz:2",
+      "orange",
+      [
+        "v-10"
+      ]
+    ],
+    [
+      "nano:GND.2",
+      "bz:1",
+      "black",
+      [
+        "v-10"
+      ]
+    ],
+    [
+      "nano:8",
+      "b_h_up:1.l",
+      "green",
+      [
+        "v10"
+      ]
+    ],
+    [
+      "b_h_up:2.l",
+      "nano:GND.1",
+      "black",
+      [
+        "v10"
+      ]
+    ],
+    [
+      "nano:9",
+      "b_h_dn:1.l",
+      "green",
+      [
+        "v10"
+      ]
+    ],
+    [
+      "b_h_dn:2.l",
+      "nano:GND.1",
+      "black",
+      [
+        "v10"
+      ]
+    ],
+    [
+      "nano:10",
+      "b_m_up:1.l",
+      "green",
+      [
+        "v10"
+      ]
+    ],
+    [
+      "b_m_up:2.l",
+      "nano:GND.1",
+      "black",
+      [
+        "v10"
+      ]
+    ],
+    [
+      "nano:11",
+      "b_m_dn:1.l",
+      "green",
+      [
+        "v10"
+      ]
+    ],
+    [
+      "b_m_dn:2.l",
+      "nano:GND.1",
+      "black",
+      [
+        "v10"
+      ]
+    ],
+    [
+      "nano:12",
+      "b_s_up:1.l",
+      "green",
+      [
+        "v10"
+      ]
+    ],
+    [
+      "b_s_up:2.l",
+      "nano:GND.1",
+      "black",
+      [
+        "v10"
+      ]
+    ],
+    [
+      "nano:13",
+      "b_s_dn:1.l",
+      "green",
+      [
+        "v10"
+      ]
+    ],
+    [
+      "b_s_dn:2.l",
+      "nano:GND.1",
+      "black",
+      [
+        "v10"
+      ]
+    ],
+    [
+      "nano:2",
+      "b_start:1.l",
+      "green",
+      [
+        "v10"
+      ]
+    ],
+    [
+      "b_start:2.l",
+      "nano:GND.1",
+      "black",
+      [
+        "v10"
+      ]
+    ]
+  ],
+  "dependencies": {}
+}
